@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 
+
 def plot_scatter(X, Y, x_start, x_end, y_start, y_end, color='r'):
     width = 10.0
     height = (y_end - y_start) / (x_end - x_start) * width
