@@ -1,16 +1,19 @@
-# This is a sample Python script.
+# Author = Dario Rodriguez
+# Start date = 11/14/2020
+# Institution: University of Illinois at Urbana Champaign
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+# We have to import the libraries that we'll use
+
+import math
+import numpy
+from scipy import integrate
+from matplotlib import pyplot as plt
+from readFunctions.read_doc import *
+
+# General variables (modify if neccesary)
+main_path = 'C:/Users/dario/OneDrive - University of Illinois - Urbana/First Semester/Applied Aerodynamics/Project Aerodynamics/Panel_method'
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
+x,y = read_txt('naca0012',main_path)
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/

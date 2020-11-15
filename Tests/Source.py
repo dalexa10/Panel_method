@@ -1,7 +1,6 @@
 import math
 import numpy as np
-import matplotlib.pyplot as plt
-from plotFunctions.plot_functions import *
+from Tests.plot_functions import *
 
 
 # Let's create a meshgrid to test the plotting function visualize the streamlines in steady condition
