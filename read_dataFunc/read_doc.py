@@ -1,6 +1,7 @@
 import os
 import numpy as np
 
+
 def read_txt(af_name, main_path):
     """
     This function reads the .txt files that contains the airfoil geometry
@@ -8,8 +9,8 @@ def read_txt(af_name, main_path):
     :return:
     """
     try:
-        af_path = os.path.join(main_path, 'Resources', '/', af_name, '.dat')
-        #airfoil = af_path + "/" + af_name + '.dat'
+        af_path = os.path.join(main_path, 'Resources', af_name + '.dat')
+        # airfoil = af_path + "/" + af_name + '.dat'
         if os.path.exists(af_path):
             print('Nice! We have that airfoil in our database')
             with open(af_path, 'r') as af_file:
@@ -21,6 +22,4 @@ def read_txt(af_name, main_path):
     except TypeError:
         print('Something went wrong, try again')
         pass
-    return x,y
-
-
+    return x, y
