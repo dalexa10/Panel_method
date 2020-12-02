@@ -19,8 +19,8 @@ class Panel:
         Initialize source strength, tangential velocity, and pressure
         coefficient to zero
         """
-        self.xa, self.ya = xa, ya
-        self.xb, self.yb = xb, yb
+        self.xa, self.ya = xa, ya  # Start point of the panel
+        self.xb, self.yb = xb, yb  # Final point of the panel
         self.xc, self.yc = (xa + xb) / 2, (ya + yb) / 2  # Control point (middle of the panel)
         self.len = math.sqrt((xb - xa) ** 2 + (yb - ya) ** 2)  # Length of panel
 

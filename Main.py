@@ -11,7 +11,8 @@ from matplotlib import pyplot as plt
 from read_dataFunc.read_doc import *
 from plotFunc.plotting import *
 from aux_func.Aux_Func import define_panels
-from objects.panel import Panel
+from objects.panel import *
+from objects.freestream import *
 
 # General variables (modify if neccesary)
 main_path = 'C:/Users/dario/OneDrive - University of Illinois - Urbana/First Semester\
@@ -27,6 +28,6 @@ print("Reading the file, please wait")
 # Calculation zone
 N = 40  # Number of panels
 panels = define_panels(x,y, N)
+panel_plot(x, y, panels)
 
-panel_plot(x,y, panels)
-
+#

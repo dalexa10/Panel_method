@@ -1,5 +1,6 @@
 import numpy as np
 import math
+from scipy import integrate
 from objects.panel import Panel
 
 def define_panels(x, y, N=40):
@@ -43,4 +44,33 @@ def define_panels(x, y, N=40):
 
     return panels
 
+def integral_normal(x, y, panel, dxds, dyds):
+    """
+    Calculates the normal velocity geometric integral (numerically)
 
+    :param x: x coordinate of the target point
+    :param y: y coordinate of the target point
+    :param panel: panel object (source panel which contribution is evaluated)
+    :param dxds: float (derivative of x in the s direction) TODO: replace with cosine or sine Betta
+    :param dyds: float (derivative of y in the s direction)
+    :return:
+    Integral over the panel of the influence at a given target point
+    """
+    def integrand(s):
+        """
+        This is just a function of s, that is going to be integrated
+        """
+        return ((x - (panel.xa - math.sin(panel.beta)*s))*dxds +
+                (y - (panel.ya + math.cos(panel.beta)*s))*dyds) /\
+               ((x - ((panel.xa - math.sin(panel.beta)*s)))**2 +
+                ((y - ((panel.xa - math.cos(panel.beta)*s)))**2))
+    return integrate.quad(integrand, 0.0, panel.len)[0]
+
+
+def build_matrix(panels):
+    """
+    Builds the
+
+    :param panels:
+    :return:
+    """
