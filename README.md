@@ -1,4 +1,5 @@
 # Vortex Panel Method
-This is a test of a vortex panel method to characterize the airfoil aerodynamics
+Vortex panel method to characterize the airfoil aerodynamics implemented in Python. I can scrap airfoil coordinates from the website and characterize them 
+aerodynamically by means of the panel method. 
 
 Author: Darío Rodriguez 
